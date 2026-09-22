@@ -16,7 +16,7 @@ Needs the engine's toolchain ([xmake](https://xmake.io)) and Python 3 with
 Pillow for the map tools.
 
 ```sh
-git clone --recurse-submodules <this repo>
+git clone --recurse-submodules https://github.com/nepinhum/zombrik.git
 cd embrik && xmake && cd ..
 
 ./dev.sh --server --port 5000      # dedicated server
