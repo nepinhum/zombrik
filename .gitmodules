@@ -1,0 +1,3 @@
+[submodule "embrik"]
+	path = embrik
+	url = https://github.com/schphe/embrik.git
