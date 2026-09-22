@@ -32,7 +32,7 @@ each map into the engine's `mods/`, so the submodule and repo root stay clean.
 ```text
 mod/        the game mode: map registry, spawning, chat commands
 maps/       one mod per map, Counter-Strike style
-asset/      source art; see each pack's NOTICE.md
+asset/      source art: packs/ as downloaded, props/ for the Tiled palette
 tools/      Tiled map compiler and asset helpers
 embrik/     the engine as a submodule
 ```
@@ -56,8 +56,3 @@ Edit `maps/<name>/src/<name>.tmx`, then rebuild and restart the server:
 ```sh
 ./tools/build_maps.sh
 ```
-
-## Assets
-
-Every pack under `asset/` carries a `NOTICE.md`. Everything here is free to use
-and redistribute, CC0 or equivalent.
