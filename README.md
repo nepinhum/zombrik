@@ -1,5 +1,8 @@
 # zombrik
 
+>**NOTICE!**
+> Development is available at "dev" branch.
+
 Top-down multiplayer zombie survival, built as a Luau mod for
 [embrik](https://github.com/schphe/embrik). Quick play: join, shoot zombies, get
 turned. Inspired by Brotato and 20 Minutes Till Dawn.
