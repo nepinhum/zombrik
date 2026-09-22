@@ -1,0 +1,6 @@
+{
+    "name": "zm_street",
+    "version": "0.1.0",
+    "description": "Development map.",
+    "depends": ["zombrik"]
+}
