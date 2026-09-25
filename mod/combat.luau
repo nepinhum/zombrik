@@ -28,6 +28,13 @@ function M.equip(body: Entity, gun: string)
     body:projectile("zombrik/fx/bullet.png")
 end
 
+function M.heal(body: Entity)
+    local hp = body.Health
+    if hp ~= nil then
+        body.Health = { current = hp.max, max = hp.max }
+    end
+end
+
 function M.arm(body: Entity)
     body.Health = { current = DEFAULT_HEALTH, max = DEFAULT_HEALTH }
     M.equip(body, DEFAULT_GUN)
@@ -69,9 +76,13 @@ function M.tick(tick: number)
             waiting[id] = nil
             local body = world.entity(id)
             if body then
-                local p = map.spawn_point()
-                body:teleport(p.x, p.y)
-                M.arm(body)
+                if body:has(Dummy) then
+                    M.heal(body)
+                else
+                    local p = map.spawn_point()
+                    body:teleport(p.x, p.y)
+                    M.arm(body)
+                end
                 body:remove(Dying)
             end
         end

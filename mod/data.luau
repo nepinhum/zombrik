@@ -7,6 +7,10 @@ export type Health = Replicated<{ current: number, max: number }>
 -- only needs to know what a hit from this body is worth.
 export type Weapon = Component<{ damage: number }>
 
+-- Dev dummies: shootable targets that stay where they are put, so shooting can
+-- be tested without a second client. Goes away with the real zombie team.
+export type Dummy = ComponentTag<{}>
+
 export type GunProto = Prototype<{ ProjectileWeapon: ProjectileWeapon, Ammo: Ammo, Weapon: Weapon }>
 
 -- cooldown is in ticks (60/s), speed and muzzle in world units, a tile is 32.
